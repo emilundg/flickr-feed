@@ -7,12 +7,26 @@
         <meta name="author" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="resources/css/main.css" rel="stylesheet">
+        <link href="./resources/css/main.css" rel="stylesheet">
     </head>
 
     <body>
+        <form>
+            <div>
+                <label for="imageSearchInput">Cat query:
+                </label>
+                <input
+                    type="text"
+                    placeholder="Enter a cat"
+                    id="cat"
+                    name="cat"
+                    required>
+            </div>
+            <button type="submit">Search for kittens</button>
+        </form>
 
-        <script src="/resources/scripts/main.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="./resources/scripts/main.js"></script>
     </body>
 
 </html>
