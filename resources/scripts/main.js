@@ -2,6 +2,7 @@ const form = document.querySelector('form');
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 
+    // Fetched images is from API flickr-api.js.
     var fetchedImages = fetchImages();
     fetchedImages.then(function (images) {
         this.displayImages(images);
