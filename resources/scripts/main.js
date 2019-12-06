@@ -28,7 +28,12 @@ function displayImages(images) {
 }
 
 function createImageElement(imageSource) {
-    const imageElement = document.createElement("img");
-    imageElement.src = imageSource;
+    const imageElement = document.createElement("div");
+    // imageElement.src = imageSource;
+    // This is needed in order to add unique image source to a div.
+    imageElement.setAttribute("style", "background-image: url(" + imageSource + ");");
+
+    imageElement.classList.add('gallery__image')
+
     return imageElement;
 }

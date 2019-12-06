@@ -11,22 +11,18 @@
     </head>
 
     <body>
-        <form>
-            <div>
+        <div class="form__container">
+            <form>
                 <label for="imageSearchInput">Cat query:
                 </label>
-                <input
-                    type="text"
-                    placeholder="Enter a cat"
-                    id="cat"
-                    name="cat"
-                    required>
-            </div>
-            <button type="submit">Search for kittens</button>
-        </form>
-
-        <div id="container">
+                <div>
+                    <input type="text" placeholder="Enter a cat" id="cat" name="cat" required>
+                    <button type="submit">Search for kittens</button>
+                </div>
+            </form>
         </div>
+
+        <div id="container" class="gallery__container"></div>
 
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
         <script src="./resources/api/flickr-api.js"></script>

@@ -1,0 +1,15 @@
+.form__container {
+    display: block;
+    margin: 0 auto;
+    width: 344px;
+}
+
+.gallery__container{
+    height: 80vh;    
+    overflow: hidden;
+}
+
+.gallery__image {
+    height: 20%;
+    background-size: cover;
+}
