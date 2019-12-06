@@ -22,14 +22,14 @@
 
 .gallery__image {
     height: 34%;
-    background-size: cover;
-    background-position: cover;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /*
 * Margin classes
 */
-
 .mt-5 {
     margin-top: 55px;
 }
