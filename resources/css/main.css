@@ -4,12 +4,36 @@
     width: 344px;
 }
 
-.gallery__container{
-    height: 80vh;    
+.gallery__container {
+    height: 89vh;
     overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*
+* Design for mobile screen first. Media screen is needed for larger screen size styling.
+*/
+@media only screen and (min-width: 768px) {
+    .gallery__container {
+        width: 55%;
+    }
 }
 
 .gallery__image {
-    height: 20%;
+    height: 34%;
     background-size: cover;
+    background-position: cover;
+}
+
+/*
+* Margin classes
+*/
+
+.mt-5 {
+    margin-top: 55px;
+}
+
+.mb-5 {
+    margin-bottom: 55px;
 }
