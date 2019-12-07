@@ -22,9 +22,8 @@ form.addEventListener('submit', function (e) {
 
 // This is needed in order to not store previous search results.
 function clearPreviousImages() {
-    let containerFirstChild = galleryContainer.firstChild;
-    while (containerFirstChild) {
-        galleryContainer.removeChild(containerFirstChild);
+    while (galleryContainer.firstChild) {
+        galleryContainer.removeChild(galleryContainer.firstChild);
     }
 }
 
