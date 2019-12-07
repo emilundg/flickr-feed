@@ -58,7 +58,7 @@ body {
 */
 .gallery__image {
     height: 344px;
-    margin: 21px 0px;
+    margin: 21px 0;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
