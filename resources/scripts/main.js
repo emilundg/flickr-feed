@@ -22,7 +22,7 @@ function displayLoader() {
 
 function removeLoader() {
     const loaderElement = document.getElementById('loader');
-    // loaderElement.remove();
+    loaderElement.remove();
 }
 
 // This is needed in order to construct the correct image URL.
