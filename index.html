@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
     <head>
         <meta charset="utf-8">
         <title>FlickrFeed</title>
@@ -8,20 +7,29 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href="./resources/css/main.css" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+            rel="stylesheet">
     </head>
 
     <body>
-        <h1>FlickrFeed</h1>
+        <div class="center">
+            <h1>Explore the world in images</h1>
+        </div>
         <div class="form__container center">
-            <form class="mb-5 mt-5">
-                <label for="imageSearchInput">Explore the world in images:
-                </label>
+            <form class="mb-5">
                 <div>
-                    <input type="text" placeholder="Search for something nice" id="searchInput">
+                    <input
+                        type="text"
+                        placeholder="Search for something nice"
+                        id="searchInput"
+                        class="mb-2">
                     <button type="submit">Search</button>
                 </div>
             </form>
         </div>
+
+        <hr>
 
         <div id="loaderContainer" class="center"></div>
         <div id="galleryContainer" class="gallery__container"></div>
