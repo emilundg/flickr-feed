@@ -38,6 +38,10 @@ body {
     justify-content: center;
 }
 
+.text-center {
+    text-align: center;
+}
+
 /*
 * Container related styling.
 */
@@ -125,7 +129,7 @@ input {
 */
 
 hr {
-    width: 34%;
+    width: 55%;
     min-width: 344px;
     color: rgba(0,0,0, 0.08);
 }
