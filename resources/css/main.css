@@ -125,9 +125,15 @@ input {
 }
 
 /*
+* Error message related styling.
+*/
+.error-message__no-result {
+    column-count: 1;
+}
+
+/*
 * General styling rules.
 */
-
 hr {
     width: 55%;
     min-width: 344px;

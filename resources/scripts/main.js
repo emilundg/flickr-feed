@@ -16,7 +16,11 @@ form.addEventListener('submit', function (e) {
     let fetchedImages = fetchImages(searchedValue);
     fetchedImages.then(function (images) {
         removeLoader();
-        this.displayImages(images);
+        if (images.length > 0) {
+            this.displayImages(images);
+        } else {
+            this.displayEmpty();
+        }
     })
 })
 
@@ -39,16 +43,36 @@ function imageURLBuilder(imageObject) {
 }
 
 function displayImages(images) {
+    const galleryClasses = galleryContainer.classList;
+    const errorClass = "error-message__no-result";
+    if (galleryClasses.contains(errorClass)) {
+        galleryClasses.remove(errorClass);
+    };
     images.forEach(imageSource => {
         const imageElement = this.createImageElement(imageSource);
         galleryContainer.appendChild(imageElement);
     })
 }
 
+function displayEmpty() {
+    const noResultText = document.createElement("h2");
+    noResultText.textContent = "No images found! Try searching for something else.";
+    noResultText
+        .classList
+        .add("center");
+    galleryContainer.appendChild(noResultText);
+
+    // Needed in order to display the message center for screen sizes larger than
+    // mobile.
+    galleryContainer
+        .classList
+        .add("error-message__no-result");
+}
+
 function createImageElement(imageSource) {
     const imageElement = document.createElement("div");
-    // imageElement.src = imageSource; This is needed in order to add unique image
-    // source to a div.
+
+    // This is needed in order to add unique image source to a div.
     imageElement.setAttribute("style", "background-image: url(" + imageSource + ");");
 
     imageElement
