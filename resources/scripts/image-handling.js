@@ -38,5 +38,8 @@ function createImageElement(imageSource) {
         .classList
         .add('gallery__image')
 
+    imageElement.addEventListener('click', function () {
+        openModal(imageSource);
+    });
     return imageElement;
 }

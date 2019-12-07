@@ -139,10 +139,10 @@ input {
     position: absolute;
     z-index: 1;
     background-color: rgba(0,0,0,0.55);
-    top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
+    visibility: hidden;
 }
 
 .modal > .gallery__image {
@@ -153,6 +153,11 @@ input {
     cursor: auto;
     display: block;
     margin: 0 auto;
+    box-shadow: none;
+}
+
+.modal > .gallery__image:hover {
+    box-shadow: none;
 }
 
 /*
