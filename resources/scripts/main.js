@@ -6,7 +6,7 @@ form.addEventListener('submit', function (e) {
 
     displayLoader();
 
-    clearPrevious();
+    clearPreviousImages();
 
     const searchedValue = document
         .getElementById('searchInput')
@@ -20,9 +20,11 @@ form.addEventListener('submit', function (e) {
     })
 })
 
-function clearPrevious() {
-    while (galleryContainer.firstChild) {
-        galleryContainer.removeChild(galleryContainer.firstChild);
+// This is needed in order to not store previous search results.
+function clearPreviousImages() {
+    let containerFirstChild = galleryContainer.firstChild;
+    while (containerFirstChild) {
+        galleryContainer.removeChild(containerFirstChild);
     }
 }
 
