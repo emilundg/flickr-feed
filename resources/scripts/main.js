@@ -2,12 +2,23 @@ const form = document.querySelector('form');
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 
+    displayLoader();
+
     // Fetched images is from API flickr-api.js.
     var fetchedImages = fetchImages();
     fetchedImages.then(function (images) {
         this.displayImages(images);
     })
 })
+
+function displayLoader() {
+    const loaderElement = document.createElement("img");
+    loaderElement.src = '../images/loader.gif';
+    document.getElementById('galleryContainer').appendChild(loaderElement);
+}
+
+function removeLoader() {
+}
 
 // This is needed in order to construct the correct image URL.
 function imageURLBuilder(imageObject) {
@@ -23,7 +34,7 @@ function imageURLBuilder(imageObject) {
 function displayImages(images) {
     images.forEach(imageSource => {
         const imageElement = this.createImageElement(imageSource);
-        document.getElementById('container').appendChild(imageElement);
+        document.getElementById('galleryContainer').appendChild(imageElement);
     })
 }
 
