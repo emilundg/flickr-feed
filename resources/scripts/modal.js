@@ -9,6 +9,7 @@ function openModal(imageSource) {
     modalElement.style.top = windowPositionY + 'px';
    
     enableClose();
+    disableScroll();
 
     modalElement.style.visibility = 'visible';
 
@@ -50,8 +51,17 @@ function disableKeyboardClose() {
     document.removeEventListener('keyup', enableKeyboardClose);
 }
 
+function disableScroll() {
+    document.body.style.overflow = 'hidden';
+}
+
+function enableScroll() {
+    document.body.style.overflow = 'visible';
+}
+
 function closeModal() {
     disableKeyboardClose();
+    enableScroll();
     
     if (modalElement.firstChild) {
         modalElement.removeChild(modalElement.firstChild);
