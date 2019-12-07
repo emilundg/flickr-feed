@@ -17,21 +17,16 @@ body {
 * Positioning related styling.
 */
 .center {
-    display: block;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 /*
 * Container related styling.
 */
-.form__container {
-    width: 344px;
-}
-
 .gallery__container {
     /* height: 89vh; */
     overflow: hidden;
-    width: 100%;
     margin: 0 auto;
     column-count: 1;
     column-gap: 21px;
@@ -68,4 +63,26 @@ body {
 }
 .gallery__image:hover {
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+/*
+* Input related styling
+*/
+input {
+    border-radius: 55px;
+    height: 34px;
+    width: 100%;
+    max-width: 344px;
+    border: 1px solid rgba(0,0,0, 0.21);
+}
+
+/*
+* Button related styling
+*/
+button {
+    height: 34px;
+    background-color: white;
+    border: 1px solid rgba(0,0,0, 0.21);
+    border-radius: 5px;
+    min-width: 89px;
 }
