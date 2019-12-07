@@ -79,6 +79,7 @@ body {
 * Image related styling.
 */
 .gallery__image {
+    background-color: black;
     height: 344px;
     margin: 21px 0;
     background-size: cover;
@@ -154,10 +155,19 @@ input {
     display: block;
     margin: 0 auto;
     box-shadow: none;
+    background-size: contain;
+    background-color: transparent;
 }
 
 .modal > .gallery__image:hover {
     box-shadow: none;
+}
+
+@media only screen and (min-width: 1024px) {
+    .modal > .gallery__image {
+        top: 5%;
+        height: 89vh;
+    }
 }
 
 /*
