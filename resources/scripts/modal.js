@@ -7,9 +7,11 @@ function openModal(imageSource) {
 
     const windowPositionY = getYScrollPosition();
     modalElement.style.top = windowPositionY + 'px';
+   
+    enableClose();
+
     modalElement.style.visibility = 'visible';
 
-    enableClose();
 }
 
 function copyImageElement(imageSource) {
@@ -30,6 +32,10 @@ function getYScrollPosition() {
 
 function enableClose() {
     document.addEventListener('keyup', enableKeyboardClose);
+
+    modalElement.addEventListener('click', function(e) {
+        closeModal();
+    })
 }
 
 function enableKeyboardClose() {
@@ -39,12 +45,17 @@ function enableKeyboardClose() {
     }
 }
 
+// This function is needed in order for the page to not still listen for keyup event.
 function disableKeyboardClose() {
     document.removeEventListener('keyup', enableKeyboardClose);
 }
 
 function closeModal() {
     disableKeyboardClose();
-    modalElement.removeChild(modalElement.firstChild);
+    
+    if (modalElement.firstChild) {
+        modalElement.removeChild(modalElement.firstChild);
+    }
+
     modalElement.style.visibility = 'hidden';
 }
