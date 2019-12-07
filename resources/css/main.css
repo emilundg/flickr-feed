@@ -1,6 +1,26 @@
-.form__container {
+/*
+* Margin classes
+*/
+.mt-5 {
+    margin-top: 55px;
+}
+
+.mb-5 {
+    margin-bottom: 55px;
+}
+
+/*
+* Positioning related styling.
+*/
+.center {
     display: block;
     margin: 0 auto;
+}
+
+/*
+* Container related styling.
+*/
+.form__container {
     width: 344px;
 }
 
@@ -20,20 +40,12 @@
     }
 }
 
+/*
+* Image related styling.
+*/
 .gallery__image {
     height: 34%;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-}
-
-/*
-* Margin classes
-*/
-.mt-5 {
-    margin-top: 55px;
-}
-
-.mb-5 {
-    margin-bottom: 55px;
 }
