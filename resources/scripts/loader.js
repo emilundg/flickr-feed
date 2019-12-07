@@ -16,5 +16,7 @@ function displayLoader() {
 
 function removeLoader() {
     const loaderElement = document.getElementById('loader');
-    loaderElement.remove();
+    if (loaderElement) {
+        loaderElement.remove();
+    }
 }
