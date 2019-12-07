@@ -1,8 +1,6 @@
-const searchApiURL = 'https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=d22802' +
-        'aa39df5256ae0c31881d8a733f&tags=cats&per_page=50&page=&format=json&nojsoncallbac' +
-        'k=1';
+async function fetchImages(tag) {
+    let searchApiURL = buildUrl(tag);
 
-async function fetchImages() {
     let imagesURL = [];
     try {
         await axios
@@ -20,4 +18,11 @@ async function fetchImages() {
     };
 
     return imagesURL;
+}
+
+function buildUrl(searchedTag) {
+    const completeUrl = 'https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=d22802' +
+            'aa39df5256ae0c31881d8a733f&tags=' + searchedTag + '&per_page=50&page=&format=json&nojsoncallback=1';
+
+    return completeUrl;
 }

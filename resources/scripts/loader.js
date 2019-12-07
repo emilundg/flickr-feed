@@ -3,7 +3,7 @@ function displayLoader() {
     loaderElement.src = 'https://raw.githubusercontent.com/emilundg/flickr-feed/master/resources/images/loader.gif';
     loaderElement.id = 'loader';
     loaderElement.classList.add('center')
-    document.getElementById('galleryContainer').appendChild(loaderElement);
+    document.getElementById('loaderContainer').appendChild(loaderElement);
 }
 
 function removeLoader() {

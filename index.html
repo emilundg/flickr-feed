@@ -13,15 +13,16 @@
     <body>
         <div class="form__container center">
             <form class="mb-5 mt-5">
-                <label for="imageSearchInput">Cat query:
+                <label for="imageSearchInput">Explore the world in images:
                 </label>
                 <div>
-                    <input type="text" placeholder="Enter a cat" id="cat" name="cat" required>
-                    <button type="submit">Search for kittens</button>
+                    <input type="text" placeholder="Search for something nice" id="searchInput" required>
+                    <button type="submit">Search</button>
                 </div>
             </form>
         </div>
 
+        <div id="loaderContainer"></div>
         <div id="galleryContainer" class="gallery__container"></div>
 
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
