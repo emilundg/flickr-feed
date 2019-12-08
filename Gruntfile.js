@@ -24,7 +24,7 @@ module.exports = function (grunt) {
             },
             target: {
                 files: {
-                    'dist/all.min.js': ['./src/resources/api/*.js', 'src/resources/scripts/*.js']
+                    'dist/js/all.min.js': ['./src/resources/api/*.js', 'src/resources/scripts/*.js']
                 }
             }
         }

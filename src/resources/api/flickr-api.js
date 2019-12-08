@@ -12,7 +12,7 @@ async function fetchImages(tag) {
         })
     } catch (error) {
         console.log(error);
-    };
+    }
 
     return imagesURL;
 }
