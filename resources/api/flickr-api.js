@@ -3,16 +3,13 @@ async function fetchImages(tag) {
 
     let imagesURL = [];
     try {
-        await axios
-            .get(searchApiURL)
-            .then(function (response) {
-                const responseData = response.data;
-                const photos = responseData.photos.photo;
-                photos.forEach(image => {
-                    let imageURL = this.imageURLBuilder(image);
-                    imagesURL.push(imageURL)
-                })
-            })
+        let response = await fetch(searchApiURL);
+        let responseData = await response.json();
+        const photos = responseData.photos.photo;
+        photos.forEach(image => {
+            let imageURL = this.imageURLBuilder(image);
+            imagesURL.push(imageURL)
+        })
     } catch (error) {
         console.log(error);
     };
