@@ -2,6 +2,8 @@
 
 This project aim is to fetch images from Flickr with their open API and display them in a responsive gallery. 
 
+Available at https://emilundg.github.io/flickr-feed/
+
 ## Browser support
 Latest versions of:
 - [x] Firefox
