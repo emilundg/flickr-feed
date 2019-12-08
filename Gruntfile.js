@@ -15,20 +15,24 @@ module.exports = function (grunt) {
             options: {
                 configFile: './.eslintrc.json'
             },
-            target: ['./src/resources/scripts/*.js']
+            target: ['./src/resources/api/*.js', './src/resources/scripts/*.js']
         },
 
         uglify: {
-            my_target: {
+            options: {
+                compress: true
+            },
+            target: {
                 files: {
-                    'dist/all.min.js': ['src/resources/scripts/*.js']
+                    'dist/all.min.js': ['./src/resources/api/*.js', 'src/resources/scripts/*.js']
                 }
             }
         }
     });
-    grunt.loadNpmTasks("grunt-contrib-cssmin");
-    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-uglify-es');
     grunt.loadNpmTasks('grunt-eslint');
 
-    grunt.registerTask('default', ['cssmin', 'uglify', 'eslint']);
+    grunt.registerTask('js-clean', 'eslint');
+    grunt.registerTask('default', ['cssmin', 'uglify']);
 };
