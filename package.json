@@ -1,5 +1,5 @@
 {
-    "name": "FlickrFeed",
+    "name": "flickrfeed",
     "version": "0.1.0",
     "devDependencies": {
         "eslint": "^6.7.2",
