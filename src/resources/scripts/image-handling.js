@@ -1,4 +1,4 @@
-// This is needed in order to not store previous search results.
+// This is needed in order to not store previous search result images.
 function clearPreviousImages() {
     while (galleryContainer.firstChild) {
         galleryContainer.removeChild(galleryContainer.firstChild);
@@ -19,9 +19,12 @@ function imageURLBuilder(imageObject) {
 function displayImages(images) {
     const galleryClasses = galleryContainer.classList;
     const errorClass = "error-message__no-result";
+
+    // Needed in order to remove previous empty result. If such exist.
     if (galleryClasses.contains(errorClass)) {
         galleryClasses.remove(errorClass);
     }
+    
     images.forEach(imageSource => {
         const imageElement = this.createImageElement(imageSource);
         galleryContainer.appendChild(imageElement);

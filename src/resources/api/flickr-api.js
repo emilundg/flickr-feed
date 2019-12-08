@@ -17,6 +17,7 @@ async function fetchImages(tag) {
     return imagesURL;
 }
 
+// Needed in order to format the url to flickr image sources.
 function buildUrl(searchedTag) {
     const completeUrl = 'https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=d22802' +
             'aa39df5256ae0c31881d8a733f&tags=' + searchedTag + '&per_page=50&page=&format=json&nojsoncallback=1';
