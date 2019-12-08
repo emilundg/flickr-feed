@@ -1,11 +1,11 @@
-var modalElement = document.getElementById('galleryModal');
+const modalElement = document.getElementById('galleryModal');
 
 function openModal(imageSource) {
-    var copiedImageElement = copyImageElement(imageSource);
+    const copiedImageElement = copyImageElement(imageSource);
 
     modalElement.appendChild(copiedImageElement);
 
-    var windowPositionY = getYScrollPosition();
+    const windowPositionY = getYScrollPosition();
     modalElement.style.top = windowPositionY + 'px';
 
     enableClose();
@@ -16,7 +16,7 @@ function openModal(imageSource) {
 }
 
 function copyImageElement(imageSource) {
-    var copiedImageElement = document.createElement("div");
+    const copiedImageElement = document.createElement("div");
 
     copiedImageElement.setAttribute("style", "background-image: url(" + imageSource + ");");
 
@@ -34,13 +34,13 @@ function getYScrollPosition() {
 function enableClose() {
     document.addEventListener('keyup', enableKeyboardClose);
 
-    modalElement.addEventListener('click', function () {
+    modalElement.addEventListener('click', function (e) {
         closeModal();
     })
 }
 
 function enableKeyboardClose() {
-    var event = window.event;
+    const event = window.event;
     if (event.keyCode === 27) {
         closeModal();
     }

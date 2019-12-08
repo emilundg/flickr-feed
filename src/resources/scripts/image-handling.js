@@ -7,29 +7,29 @@ function clearPreviousImages() {
 
 // This is needed in order to construct the correct image URL.
 function imageURLBuilder(imageObject) {
-    var imageFarm = imageObject.farm;
-    var imageServer = imageObject.server;
-    var imageID = imageObject.id;
-    var imageSecret = imageObject.secret;
+    const imageFarm = imageObject.farm;
+    const imageServer = imageObject.server;
+    const imageID = imageObject.id;
+    const imageSecret = imageObject.secret;
 
-    var imagePath = 'https://farm' + imageFarm + '.staticflickr.com/' + imageServer + '/' + imageID + '_' + imageSecret + '.jpg';
+    const imagePath = 'https://farm' + imageFarm + '.staticflickr.com/' + imageServer + '/' + imageID + '_' + imageSecret + '.jpg';
     return imagePath;
 }
 
 function displayImages(images) {
-    var galleryClasses = galleryContainer.classList;
-    var errorClass = "error-message__no-result";
+    const galleryClasses = galleryContainer.classList;
+    const errorClass = "error-message__no-result";
     if (galleryClasses.contains(errorClass)) {
         galleryClasses.remove(errorClass);
     }
-    images.forEach(function(imageSource) {
-        var imageElement = this.createImageElement(imageSource);
+    images.forEach(imageSource => {
+        const imageElement = this.createImageElement(imageSource);
         galleryContainer.appendChild(imageElement);
     })
 }
 
 function createImageElement(imageSource) {
-    var imageElement = document.createElement("div");
+    const imageElement = document.createElement("div");
 
     // This is needed in order to add unique image source to a div.
     imageElement.setAttribute("style", "background-image: url(" + imageSource + ");");

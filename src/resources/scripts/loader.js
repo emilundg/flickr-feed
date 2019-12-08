@@ -1,9 +1,9 @@
 function displayLoader() {
-    var loaderContainer = document.getElementById('loaderContainer');
+    const loaderContainer = document.getElementById('loaderContainer');
 
     // The check for childElement is needed in order to not have multiple spinners.
     if (loaderContainer.childElementCount === 0) {
-        var loaderElement = document.createElement("img");
+        const loaderElement = document.createElement("img");
         loaderElement.src = 'https://raw.githubusercontent.com/emilundg/flickr-feed/master/src/resources/imag' +
                 'es/loader.gif';
         loaderElement.id = 'loader';
@@ -15,7 +15,7 @@ function displayLoader() {
 }
 
 function removeLoader() {
-    var loaderElement = document.getElementById('loader');
+    const loaderElement = document.getElementById('loader');
     if (loaderElement) {
         loaderElement.remove();
     }
