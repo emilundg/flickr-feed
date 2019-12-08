@@ -109,9 +109,10 @@ input {
 * Button related styling
 */
 button {
+    background-color: #3778C2;
     float: right;
     height: 34px;
-    background-color: white;
+    color: white;
     border: 1px solid rgba(0,0,0, 0.21);
     border-radius: 5px;
     min-width: 89px;
