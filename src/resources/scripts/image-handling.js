@@ -21,7 +21,7 @@ function displayImages(images) {
     const errorClass = "error-message__no-result";
     if (galleryClasses.contains(errorClass)) {
         galleryClasses.remove(errorClass);
-    };
+    }
     images.forEach(imageSource => {
         const imageElement = this.createImageElement(imageSource);
         galleryContainer.appendChild(imageElement);

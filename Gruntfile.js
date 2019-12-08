@@ -12,7 +12,10 @@ module.exports = function (grunt) {
         },
 
         eslint: {
-            target: ['src/resources/scripts/*.js']
+            options: {
+                configFile: './.eslintrc.json'
+            },
+            target: ['./src/resources/scripts/*.js']
         }
     });
     grunt.loadNpmTasks("grunt-contrib-cssmin");

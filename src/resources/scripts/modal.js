@@ -7,7 +7,7 @@ function openModal(imageSource) {
 
     const windowPositionY = getYScrollPosition();
     modalElement.style.top = windowPositionY + 'px';
-   
+
     enableClose();
     disableScroll();
 
@@ -34,7 +34,7 @@ function getYScrollPosition() {
 function enableClose() {
     document.addEventListener('keyup', enableKeyboardClose);
 
-    modalElement.addEventListener('click', function(e) {
+    modalElement.addEventListener('click', function () {
         closeModal();
     })
 }
@@ -46,7 +46,8 @@ function enableKeyboardClose() {
     }
 }
 
-// This function is needed in order for the page to not still listen for keyup event.
+// This function is needed in order for the page to not still listen for keyup
+// event.
 function disableKeyboardClose() {
     document.removeEventListener('keyup', enableKeyboardClose);
 }
@@ -62,7 +63,7 @@ function enableScroll() {
 function closeModal() {
     disableKeyboardClose();
     enableScroll();
-    
+
     if (modalElement.firstChild) {
         modalElement.removeChild(modalElement.firstChild);
     }
