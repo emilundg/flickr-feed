@@ -1,6 +1,6 @@
-const galleryContainer = document.getElementById('galleryContainer');
+var galleryContainer = document.getElementById('galleryContainer');
 
-const form = document.querySelector('form');
+var form = document.querySelector('form');
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 
@@ -8,12 +8,12 @@ form.addEventListener('submit', function (e) {
 
     clearPreviousImages();
 
-    const searchedValue = document
+    var searchedValue = document
         .getElementById('searchInput')
         .value;
 
     // Fetched images is from API flickr-api.js.
-    let fetchedImages = fetchImages(searchedValue);
+    var fetchedImages = fetchImages(searchedValue);
     fetchedImages.then(function (images) {
         removeLoader();
         if (images.length > 0) {
@@ -25,7 +25,7 @@ form.addEventListener('submit', function (e) {
 })
 
 function displayEmpty() {
-    const noResultText = document.createElement("h2");
+    var noResultText = document.createElement("h2");
     noResultText.textContent = "No images found! Try searching for something else.";
     noResultText
         .classList

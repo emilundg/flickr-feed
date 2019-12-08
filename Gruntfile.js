@@ -16,10 +16,19 @@ module.exports = function (grunt) {
                 configFile: './.eslintrc.json'
             },
             target: ['./src/resources/scripts/*.js']
+        },
+
+        uglify: {
+            my_target: {
+                files: {
+                    'dist/all.min.js': ['src/resources/scripts/*.js']
+                }
+            }
         }
     });
     grunt.loadNpmTasks("grunt-contrib-cssmin");
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-eslint');
 
-    grunt.registerTask('default', ['cssmin', 'eslint']);
+    grunt.registerTask('default', ['cssmin', 'uglify', 'eslint']);
 };
