@@ -1,0 +1,11 @@
+{
+    "name": "FlickrFeed",
+    "version": "0.1.0",
+    "devDependencies": {
+        "grunt-contrib-cssmin": "^3.0.0",
+        "grunt-eslint": "^22.0.0"
+    },
+    "dependencies": {
+        "grunt": "^1.0.4"
+    }
+}

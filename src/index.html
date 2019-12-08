@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>FlickrFeed</title>
+        <meta name="author" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="./resources/css/main.css" rel="stylesheet">
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <body>
+        <div id="galleryModal" class="modal"></div>
+
+        <div class="center text-center mt-5">
+            <h1>Explore the world in images</h1>
+        </div>
+        <div class="form__container center">
+            <form class="mb-5">
+                <div>
+                    <input
+                        type="text"
+                        placeholder="Search for something nice"
+                        id="searchInput"
+                        class="mb-2">
+                    <button type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+
+        <hr>
+
+        <div id="loaderContainer" class="center mt-3 mb-3"></div>
+        <div id="galleryContainer" class="gallery__container"></div>
+
+        <script src="resources/scripts/modal.js"></script>
+        <script src="./resources/scripts/image-handling.js"></script>
+        <script src="./resources/api/flickr-api.js"></script>
+        <script src="./resources/scripts/loader.js"></script>
+        <script src="./resources/scripts/main.js"></script>
+    </body>
+
+</html>
